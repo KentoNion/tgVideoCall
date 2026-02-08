@@ -1,0 +1,15 @@
+version: "3"
+
+
+tasks:
+  fmt:
+    desc: Форматирует код с помощью go fmt
+    dir: "."
+    cmds:
+      - go fmt ./...
+
+  lint:
+    desc: Запускает golangci-lint для проверки кода
+    dir: "."
+    cmds:
+      - golangci-lint run ./...
